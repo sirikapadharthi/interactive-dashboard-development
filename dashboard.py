@@ -10,7 +10,11 @@ st.set_page_config(
 st.title("📊 Interactive Dashboard Development")
 
 # Load data
-df = pd.read_csv("data/sales_data.csv")
+import os
+import pandas as pd
+
+csv_path = os.path.join("data", "sales_data.csv")
+df = pd.read_csv(csv_path)
 
 # KPI Metrics
 col1, col2, col3 = st.columns(3)
